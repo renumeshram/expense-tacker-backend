@@ -10,6 +10,11 @@ const Expense = require('./models/Expense');
 app.use(express.json());
 app.use(cors());
 
+// Default route for root URL
+app.get('/', (req, res) => {
+    res.send('Expense Tracker API is running');
+});
+
 // Default route
 app.get('/expenses', async(req, res) =>{
 
